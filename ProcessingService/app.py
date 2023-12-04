@@ -143,13 +143,13 @@ def init_scheduler():
     sched.start()
 
 def create_default_inventory_file():
-    if not os.path.isfile("inventory_data.json"):
-        logger.info("Creating default inventory_data.json file")
+    if not os.path.isfile(app_config['datastore']['filename']):
+        logger.info("Creating default " + app_config['datastore']['filename'] + " file")
         default_data = {
             "num_inventories": 0,
             "num_updates": 0
         }
-        with open("inventory_data.json", 'w') as f:
+        with open(app_config['datastore']['filename'], 'w') as f:
             json.dump(default_data, f)
 
 if __name__ == '__main__':
