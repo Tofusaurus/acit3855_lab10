@@ -49,10 +49,11 @@ hostname = f"{app_config['events']['hostname']}:{app_config['events']['port']}"
 logger.info(f"Connecting to kafka '{hostname}'")
 
 
+max_retries = app_config['retries']['max_attempts']
+sleep_time_sec = app_config['retries']['sleep_time_sec']
+
 retry_count = 0
 while retry_count < max_retries:
-    max_retries = app_config['retries']['max_attempts']
-    sleep_time_sec = app_config['retries']['sleep_time_sec']
     # Display an info log message indicating you are trying to connect to Kafka and the current
     # retry count
     logger.info(f"Trying to connect to Kafka. Retry Count: {retry_count}")
