@@ -13,8 +13,6 @@ import time
 # with open('app_conf.yml', 'r') as f:
 #     app_config = yaml.safe_load(f.read())
 
-# max_retries = app_config['retries']['max_attempts']
-# sleep_time_sec = app_config['retries']['sleep_time_sec']
 
 # with open('log_conf.yml', 'r') as f:
 #     log_config = yaml.safe_load(f.read())
@@ -35,6 +33,7 @@ else:
 
 with open(app_conf_file, 'r') as f:
     app_config = yaml.safe_load(f.read())
+
 # External Logging Configuration
 with open(log_conf_file, 'r') as f:
     log_config = yaml.safe_load(f.read())
@@ -51,7 +50,9 @@ logger.info(f"Connecting to kafka '{hostname}'")
 
 
 retry_count = 0
-while retry_count < 10:
+while retry_count < max_retries:
+    max_retries = app_config['retries']['max_attempts']
+    sleep_time_sec = app_config['retries']['sleep_time_sec']
     # Display an info log message indicating you are trying to connect to Kafka and the current
     # retry count
     logger.info(f"Trying to connect to Kafka. Retry Count: {retry_count}")
@@ -66,7 +67,7 @@ while retry_count < 10:
         logger.error(f"Connection failed to Kafka.  Retry Count: {retry_count}. Error: {str(e)}")
 
         # Sleep for the configured sleep time and then increment the retry count
-        time.sleep(3)
+        time.sleep(sleep_time_sec)
         retry_count += 1
 
 
