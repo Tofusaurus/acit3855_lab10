@@ -1,0 +1,14 @@
+version: 1
+datastore:
+  user: dbuser
+  password: Canada34$
+  hostname: fzhukafka.westus3.cloudapp.azure.com
+  port: 3306
+  db: events
+retries:
+  max_attempts: 3
+  sleep_time_sec: 5
+events:
+  hostname: fzhukafka.westus3.cloudapp.azure.com
+  port: 9092
+  topic: events

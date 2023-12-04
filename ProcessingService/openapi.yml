@@ -1,0 +1,62 @@
+openapi: 3.0.0
+info:
+  title: Inventory API
+  version: "1.0"
+servers:
+  - url: http://localhost:8100/
+    description: Development server
+paths:
+  /inventory:
+    get:
+      summary: Get inventory data
+      operationId: app.get_inventory
+      tags:
+        - Inventory
+      responses:
+        '200':
+          description: Inventory data retrieved successfully
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/InventoryItem'
+        '404':
+          description: Inventory data not found
+components:
+  schemas:
+    InventoryItem:
+      type: object
+      required:
+        - id
+        - name
+        - quantity
+        - location
+        - last_updated
+      properties:
+        id:
+          type: integer
+          format: int64
+          description: The unique identifier for an inventory item.
+          example: 1
+        name:
+          type: string
+          description: The name of the inventory item.
+          example: 'Widget A'
+        quantity:
+          type: integer
+          description: The quantity of the inventory item in stock.
+          example: 150
+        location:
+          type: string
+          description: The storage location of the inventory item within the warehouse.
+          example: 'Aisle 3, Shelf B'
+        last_updated:
+          type: string
+          format: date-time
+          description: The last date and time the inventory item was updated.
+          example: '2023-01-01T12:00:00Z'
+
+tags:
+  - name: Inventory
+    description: Operations related to inventory items

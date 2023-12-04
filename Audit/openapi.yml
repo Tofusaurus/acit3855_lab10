@@ -1,0 +1,115 @@
+openapi: 3.0.0
+info:
+  title: Event Retrieval API
+  version: "1.0.0"
+  description: This API provides event retrieval from the message queue
+  contact:
+    email: your-email@domain.com
+paths:
+  /add_inventory:
+    get:
+      summary: Gets an Event1 reading from history
+      operationId: app.get_add_inventory_reading
+      description: Gets add inventory readings from the event store
+      parameters:
+        - name: index
+          in: query
+          description: The index of add_inventory in the event store
+          required: true
+          schema:
+            type: integer
+            example: 3
+      responses:
+        '200':
+          description: Successfully returned an add_inventory event
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AddInventoryEvent'
+        '400':
+          description: Invalid request
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+
+  /update_inventory:
+    get:
+      summary: Gets an Event2 reading from history
+      operationId: app.get_update_inventory_reading
+      description: Gets update inventory readings from the event store
+      parameters:
+        - name: index
+          in: query
+          description: The index of Event2 in the event store
+          required: true
+          schema:
+            type: integer
+            example: 2
+      responses:
+        '200':
+          description: Successfully returned an Event2
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UpdateInventoryEvent'
+        '400':
+          description: Invalid request
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+
+components:
+  schemas:
+    AddInventoryEvent:
+      type: object
+      required:
+        - item_id
+        - product_name
+      properties:
+        item_id:
+          type: string
+          format: uuid
+          example: "123e4567-e89b-12d3-a456-426614174000"
+        product_name:
+          type: string
+          example: "Product"
+
+    UpdateInventoryEvent:
+      type: object
+      required:
+        - item_id
+        - product_name
+      properties:
+        item_id:
+          type: string
+          format: uuid
+          example: "123e4567-e89b-12d3-a456-426614174000"
+        product_name:
+          type: string
+          example: "Product"

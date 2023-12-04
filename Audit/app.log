@@ -1,0 +1,90 @@
+2023-11-23 15:32:47,532 - basicLogger - INFO - Retrieving add_inventory at index 3
+2023-11-23 15:37:42,285 - basicLogger - INFO - Retrieving add_inventory at index 3
+2023-11-23 15:38:15,399 - basicLogger - INFO - Retrieving add_inventory at index 3
+2023-11-23 15:39:26,289 - basicLogger - INFO - Retrieving add_inventory at index 3
+2023-11-23 15:41:40,529 - basicLogger - INFO - Retrieving add_inventory at index 3
+2023-11-23 15:43:09,821 - basicLogger - INFO - Retrieving add_inventory at index 3
+2023-11-23 15:43:24,289 - basicLogger - INFO - Retrieving add_inventory at index 0
+2023-11-23 15:43:30,929 - basicLogger - INFO - Retrieving add_inventory at index 38383839
+2023-11-23 15:43:31,931 - basicLogger - ERROR - No more messages found or could not find add_inventory at index 38383839
+2023-11-23 15:43:38,056 - basicLogger - INFO - Retrieving add_inventory at index 45
+2023-11-23 15:43:39,058 - basicLogger - ERROR - No more messages found or could not find add_inventory at index 45
+2023-11-23 15:43:42,407 - basicLogger - INFO - Retrieving add_inventory at index 10
+2023-11-23 15:43:43,409 - basicLogger - ERROR - No more messages found or could not find add_inventory at index 10
+2023-11-23 15:43:46,848 - basicLogger - INFO - Retrieving add_inventory at index 3
+2023-11-23 15:43:47,850 - basicLogger - ERROR - No more messages found or could not find add_inventory at index 3
+2023-11-23 15:43:51,155 - basicLogger - INFO - Retrieving add_inventory at index 2
+2023-11-23 15:43:52,157 - basicLogger - ERROR - No more messages found or could not find add_inventory at index 2
+2023-11-23 15:43:55,113 - basicLogger - INFO - Retrieving add_inventory at index 1
+2023-11-23 15:43:56,115 - basicLogger - ERROR - No more messages found or could not find add_inventory at index 1
+2023-11-23 15:44:01,480 - basicLogger - INFO - Retrieving add_inventory at index 3
+2023-11-23 15:44:02,481 - basicLogger - ERROR - No more messages found or could not find add_inventory at index 3
+2023-11-23 15:45:26,794 - basicLogger - INFO - Retrieving add_inventory at index 3
+2023-11-23 15:45:27,797 - basicLogger - ERROR - No more messages found or could not find add_inventory at index 3
+2023-11-23 15:45:31,030 - basicLogger - INFO - Retrieving add_inventory at index 0
+2023-11-23 15:45:32,031 - basicLogger - ERROR - No more messages found or could not find add_inventory at index 0
+2023-11-23 15:45:42,412 - basicLogger - INFO - Retrieving update_inventory at index 0
+2023-11-23 15:45:43,414 - basicLogger - ERROR - No more messages found or could not find update_inventory at index 0
+2023-11-23 15:45:48,030 - basicLogger - INFO - Retrieving update_inventory at index 5
+2023-11-23 15:45:49,033 - basicLogger - ERROR - No more messages found or could not find update_inventory at index 5
+2023-11-23 15:47:21,570 - basicLogger - INFO - Retrieving update_inventory at index 5
+2023-11-23 15:47:25,768 - basicLogger - INFO - Retrieving update_inventory at index 0
+2023-11-23 15:47:29,571 - basicLogger - INFO - Retrieving update_inventory at index 56
+2023-11-23 15:47:30,682 - basicLogger - ERROR - No more messages found or could not find update_inventory at index 56
+2023-11-23 15:47:34,231 - basicLogger - INFO - Retrieving update_inventory at index 0
+2023-11-23 15:47:38,302 - basicLogger - INFO - Retrieving update_inventory at index 5
+2023-11-23 15:47:42,390 - basicLogger - INFO - Retrieving update_inventory at index 16
+2023-11-23 15:47:48,895 - basicLogger - INFO - Retrieving update_inventory at index 90
+2023-11-23 15:47:50,008 - basicLogger - ERROR - No more messages found or could not find update_inventory at index 90
+2023-11-23 15:48:53,472 - basicLogger - INFO - Retrieving update_inventory at index 90
+2023-11-23 15:48:54,583 - basicLogger - ERROR - No more messages found or could not find update_inventory at index 90
+2023-11-23 15:49:04,214 - basicLogger - INFO - Retrieving add_inventory at index 30
+2023-11-23 15:49:10,157 - basicLogger - INFO - Retrieving add_inventory at index 45
+2023-11-23 15:49:11,264 - basicLogger - ERROR - No more messages found or could not find add_inventory at index 45
+2023-11-23 15:49:14,378 - basicLogger - INFO - Retrieving add_inventory at index 30
+2023-11-23 15:49:23,286 - basicLogger - INFO - Retrieving add_inventory at index 35
+2023-11-23 15:49:24,569 - basicLogger - ERROR - No more messages found or could not find add_inventory at index 35
+2023-11-23 15:49:27,272 - basicLogger - INFO - Retrieving add_inventory at index 30
+2023-11-23 15:49:30,611 - basicLogger - INFO - Retrieving add_inventory at index 0
+2023-11-23 15:49:34,630 - basicLogger - INFO - Retrieving add_inventory at index 5
+2023-11-23 15:49:38,529 - basicLogger - INFO - Retrieving add_inventory at index 100
+2023-11-23 15:49:39,641 - basicLogger - ERROR - No more messages found or could not find add_inventory at index 100
+2023-11-23 15:49:46,726 - basicLogger - INFO - Retrieving update_inventory at index 100
+2023-11-23 15:49:47,836 - basicLogger - ERROR - No more messages found or could not find update_inventory at index 100
+2023-11-23 15:49:49,463 - basicLogger - INFO - Retrieving update_inventory at index 0
+2023-11-23 15:49:52,801 - basicLogger - INFO - Retrieving update_inventory at index 45
+2023-11-23 15:49:54,124 - basicLogger - ERROR - No more messages found or could not find update_inventory at index 45
+2023-11-23 15:49:56,925 - basicLogger - INFO - Retrieving update_inventory at index 15
+2023-11-23 15:50:00,541 - basicLogger - INFO - Retrieving update_inventory at index 10
+2023-11-23 15:50:14,163 - basicLogger - INFO - Retrieving add_inventory at index 10
+2023-11-23 15:50:18,150 - basicLogger - INFO - Retrieving add_inventory at index 10
+2023-11-23 15:50:24,543 - basicLogger - INFO - Retrieving add_inventory at index 13
+2023-11-23 15:51:57,847 - basicLogger - INFO - Retrieving add_inventory at index 5
+2023-11-23 15:52:52,230 - basicLogger - INFO - Retrieving add_inventory at index 5
+2023-11-23 15:53:21,217 - basicLogger - INFO - Retrieving add_inventory at index 5
+2023-11-23 15:53:23,330 - basicLogger - ERROR - No more messages found or could not find add_inventory at index 5
+2023-11-23 15:53:54,030 - basicLogger - INFO - Retrieving add_inventory at index 5
+2023-11-23 15:53:56,162 - basicLogger - ERROR - No more messages found or could not find add_inventory at index 5
+2023-11-23 15:55:11,968 - basicLogger - INFO - Retrieving add_inventory at index 5
+2023-11-23 15:55:14,099 - basicLogger - ERROR - No more messages found or could not find add_inventory at index 5
+2023-11-23 15:56:20,360 - basicLogger - INFO - Retrieving update_inventory at index 0
+2023-11-23 15:56:55,722 - basicLogger - INFO - Retrieving update_inventory at index 10
+2023-11-23 15:56:59,640 - basicLogger - INFO - Retrieving update_inventory at index 1
+2023-11-30 14:02:46,722 - basicLogger - INFO - Connecting to Kafka 'fzhukafka.westus3.cloudapp.azure.com:9092'
+2023-11-30 14:02:46,938 - basicLogger - INFO - Connected to Kafka fzhukafka.westus3.cloudapp.azure.com:9092
+2023-11-30 14:15:06,466 - basicLogger - INFO - Connecting to Kafka 'fzhukafka.westus3.cloudapp.azure.com:9092'
+2023-11-30 14:15:06,657 - basicLogger - INFO - Connected to Kafka fzhukafka.westus3.cloudapp.azure.com:9092
+2023-11-30 14:18:22,092 - basicLogger - INFO - Connecting to Kafka 'fzhukafka.westus3.cloudapp.azure.com:9092'
+2023-11-30 14:18:22,284 - basicLogger - INFO - Connected to Kafka fzhukafka.westus3.cloudapp.azure.com:9092
+2023-11-30 14:24:16,544 - basicLogger - INFO - Connecting to Kafka 'fzhukafka.westus3.cloudapp.azure.com:9092'
+2023-11-30 14:24:16,694 - basicLogger - INFO - Connected to Kafka fzhukafka.westus3.cloudapp.azure.com:9092
+2023-11-30 15:07:30,799 - basicLogger - INFO - Connecting to Kafka 'fzhukafka.westus3.cloudapp.azure.com:9092'
+2023-11-30 15:07:30,992 - basicLogger - INFO - Connected to Kafka fzhukafka.westus3.cloudapp.azure.com:9092
+2023-11-30 15:12:40,882 - basicLogger - INFO - Connecting to Kafka 'fzhukafka.westus3.cloudapp.azure.com:9092'
+2023-11-30 15:12:41,032 - basicLogger - INFO - Connected to Kafka fzhukafka.westus3.cloudapp.azure.com:9092
+2023-11-30 15:13:34,200 - basicLogger - INFO - Connecting to Kafka 'fzhukafka.westus3.cloudapp.azure.com:9092'
+2023-11-30 15:13:34,398 - basicLogger - INFO - Connected to Kafka fzhukafka.westus3.cloudapp.azure.com:9092
+2023-11-30 15:14:05,168 - basicLogger - INFO - Connecting to Kafka 'fzhukafka.westus3.cloudapp.azure.com:9092'
+2023-11-30 15:14:05,316 - basicLogger - INFO - Connected to Kafka fzhukafka.westus3.cloudapp.azure.com:9092
+2023-11-30 15:20:50,495 - basicLogger - INFO - Connecting to Kafka 'fzhukafka.westus3.cloudapp.azure.com:9092'
+2023-11-30 15:20:50,699 - basicLogger - INFO - Connected to Kafka fzhukafka.westus3.cloudapp.azure.com:9092

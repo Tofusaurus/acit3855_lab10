@@ -1,0 +1,12 @@
+version: 1
+eventstore1:
+  url: http://localhost:8090/inventory
+eventstore2:
+  url: http://localhost:8090/update_inventory
+retries:
+  max_attempts: 3
+  sleep_time_sec: 5
+events:
+  hostname: fzhukafka.westus3.cloudapp.azure.com
+  port: 9092
+  topic: events

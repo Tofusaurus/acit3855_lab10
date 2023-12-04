@@ -1,0 +1,221 @@
+openapi: 3.0.0
+info:
+  description: Warehouse Inventory Management API
+  version: "1.0.0"
+  title: Warehouse Inventory API
+  contact:
+    email: you@your-company.com
+  license:
+    name: Apache 2.0
+    url: 'http://www.apache.org/licenses/LICENSE-2.0.html'
+tags:
+  - name: warehouse_staff
+    description: Regular employees who store and retrieve items
+  - name: warehouse_managers
+    description: Managers overseeing inventory and staff operations
+paths:
+  /inventory:
+    get:
+      tags:
+        - warehouse_staff
+      summary: Searches warehouse inventory or gets updates since a time
+      operationId: app.get_inventory
+      parameters:
+        - in: query
+          name: searchString
+          required: false
+          schema:
+            type: string
+        - in: query
+          name: skip
+          required: false
+          schema:
+            type: integer
+            format: int32
+            minimum: 0
+        - in: query
+          name: limit
+          required: false
+          schema:
+            type: integer
+            format: int32
+            minimum: 0
+            maximum: 50
+        - in: query  # Add this parameter for the 'start_timestamp' timestamp
+          name: start_timestamp
+          required: false
+          schema:
+            type: string
+            format: date-time
+          description: Optional timestamp to retrieve inventory created since this time
+        - in: query  # Add this parameter for the 'end_timestamp' timestamp
+          name: end_timestamp
+          required: false
+          schema:
+            type: string
+            format: date-time
+          description: Optional timestamp to retrieve inventory created to this time
+      responses:
+        '200':
+          description: Search results matching criteria or inventory created between the provided timestamp
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/InventoryItem'
+        '400':
+          description: Bad input parameter
+    post:
+      tags:
+        - warehouse_managers
+      summary: Adds an inventory item
+      operationId: app.add_inventory
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/InventoryItem'
+      responses:
+        '201':
+          description: Item added successfully
+        '400':
+          description: 'Invalid input, object invalid'
+        '409':
+          description: An existing item already exists
+  /inventory/update:
+    get:
+      tags:
+        - warehouse_staff
+      summary: Retrieves updates to inventory items
+      operationId: app.get_inventory_update  # New operation ID for handling this endpoint
+      parameters:
+        - in: query  # Add this parameter for the 'start_timestamp' timestamp
+          name: start_timestamp
+          required: false
+          schema:
+            type: string
+            format: date-time
+          description: Optional timestamp to retrieve inventory updates since this time
+        - in: query  # Add this parameter for the 'end_timestamp' timestamp
+          name: end_timestamp
+          required: false
+          schema:
+            type: string
+            format: date-time
+          description: Optional timestamp to retrieve inventory updates to this time
+        - in: query
+          name: searchString
+          required: false
+          schema:
+            type: string
+        - in: query
+          name: skip
+          required: false
+          schema:
+            type: integer
+            format: int32
+            minimum: 0
+        - in: query
+          name: limit
+          required: false
+          schema:
+            type: integer
+            format: int32
+            minimum: 0
+            maximum: 50
+      responses:
+        '200':
+          description: Inventory update results matching criteria or updates between the provided timestamp
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/UpdateInventoryItem'
+        '400':
+          description: Bad input parameter
+    post:
+      tags:
+        - warehouse_managers
+      summary: Updates an inventory item
+      operationId: app.update_inventory
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpdateInventoryItem'
+      responses:
+        '200':
+          description: Item updated successfully
+        '400':
+          description: 'Invalid input, object invalid'
+        '404':
+          description: Item not found
+components:
+  schemas:
+    InventoryItem:
+      type: object
+      required:
+        - item_id
+        - product_name
+        - quantity
+        - trace_id
+      properties:
+        item_id:
+          type: string
+          format: uuid
+          example: d290f1ee-6c54-4b01-90e6-d701748f0851
+        product_name:
+          type: string
+          example: Hydraulic Press
+        storage_date:
+          type: string
+          format: date-time
+          example: '2022-08-29T09:12:33.001Z'
+        stored_by:
+          type: string
+          example: John Doe
+        quantity:
+          type: integer
+          example: 20
+        location:
+          type: string
+          example: Aisle 3, Shelf B
+        weight:
+          type: number
+          format: float
+          example: 10.5
+        trace_id:
+          type: string
+          format: uuid
+          example: "123e4567-e89b-12d3-a456-426614174000"
+    UpdateInventoryItem:
+      type: object
+      required:
+        - item_id
+        - trace_id
+      properties:
+        item_id:
+          type: string
+          format: uuid
+        product_name:
+          type: string
+        storage_date:
+          type: string
+          format: date-time
+        stored_by:
+          type: string
+        quantity:
+          type: integer
+        location:
+          type: string
+        weight:
+          type: number
+          format: float
+        trace_id:
+          type: string
+          format: uuid
+          example: "123e4567-e89b-12d3-a456-426614174000"
