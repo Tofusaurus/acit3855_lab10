@@ -51,7 +51,7 @@ logger.info(f"Connecting to kafka '{hostname}'")
 
 
 retry_count = 0
-while retry_count < max_retries:
+while retry_count < 10:
     # Display an info log message indicating you are trying to connect to Kafka and the current
     # retry count
     logger.info(f"Trying to connect to Kafka. Retry Count: {retry_count}")
@@ -66,7 +66,7 @@ while retry_count < max_retries:
         logger.error(f"Connection failed to Kafka.  Retry Count: {retry_count}. Error: {str(e)}")
 
         # Sleep for the configured sleep time and then increment the retry count
-        time.sleep(sleep_time_sec)
+        time.sleep(3)
         retry_count += 1
 
 
