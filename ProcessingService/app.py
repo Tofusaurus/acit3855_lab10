@@ -59,7 +59,7 @@ def process_inventory():
     logger.info("Start Periodic Processing")
 
     try:
-        with open("inventory_data.json", "r") as file:
+        with open(app_config['datastore']['filename'], "r") as file:
             inventory_data = json.loads(file.read())
     except FileNotFoundError:
         inventory_data = {
@@ -99,7 +99,7 @@ def process_inventory():
     inventory_data["last_updated"] = str(current_timestamp)
 
     # Dump data back to json file
-    with open('inventory_data.json', 'w') as f:
+    with open(app_config['datastore']['filename'], 'w') as f:
         json.dump(inventory_data, f)
 
     logger.info("End Periodic Processing")
