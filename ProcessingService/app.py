@@ -144,6 +144,9 @@ def init_scheduler():
 
 def create_default_inventory_file():
     if not os.path.isfile(app_config['datastore']['filename']):
+        dirname = os.path.dirname(app_config['datastore']['filename'])
+        if dirname and not os.path.exists(dirname):
+            os.makedirs(dirname)
         logger.info("Creating default " + app_config['datastore']['filename'] + " file")
         default_data = {
             "num_inventories": 0,
